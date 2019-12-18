@@ -1,6 +1,7 @@
-let split = input.split(',').map(el => parseInt(el));
+let split = document.documentElement.innerText.split(',').map(el => parseInt(el));
+split[1] = 12;
+split[2] = 2;
 
-let x;
 for(let i = 0; i<= split.length; i++) {
     if(i % 4 === 0) {
         if (split[i] === 99) {

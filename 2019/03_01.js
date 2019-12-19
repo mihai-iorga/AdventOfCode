@@ -28,7 +28,7 @@ let getWireMatrix = wire => {
     }
 
     return matrix;
-}
+};
 
 let min = 999999;
 let matrixX = getWireMatrix(wires[0]);

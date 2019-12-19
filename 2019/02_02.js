@@ -1,4 +1,5 @@
 let finished = false;
+let check = 19690720;
 for (let x = 0; x <= 99; x++){
     for (let y = 0; y <= 99; y++) {
         split = document.documentElement.innerText.split(',').map(el => parseInt(el));
@@ -22,7 +23,7 @@ for (let x = 0; x <= 99; x++){
             }
         }
 
-        if (split[0] === 19690720) {
+        if (split[0] === check) {
             console.log('Result: ' + (100 * x + y));
             finished = true;
             break;

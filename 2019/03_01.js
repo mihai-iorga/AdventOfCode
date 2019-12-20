@@ -35,13 +35,15 @@ let matrixX = getWireMatrix(wires[0]);
 let matrixY = getWireMatrix(wires[1]);
 Object
     .keys(matrixX)
-    .filter(key => { return typeof matrixY[key] !== 'undefined' })
+    .filter(key => {
+        return typeof matrixY[key] !== 'undefined'
+    })
     .forEach(el => {
         [x, y] = el.split(';').map(x => {
             return parseInt(x, 10);
         });
         let distance = Math.abs(x) + Math.abs(y);
-        if(distance < min) min = distance;
+        if (distance < min) min = distance;
     });
 
 console.log('Result: ' + min);

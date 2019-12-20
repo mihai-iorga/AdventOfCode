@@ -6,7 +6,6 @@ for (let i = start; i <= stop; i++) {
     let num = i.toString().split('').map(el => parseInt(el, 10));
     let valid = 0;
     let hasAdjacent = false;
-    let lastRepeatedNumber = null;
     for (let j = 1; j < num.length; j++) {
         if (num[j] >= num[j - 1]) {
             valid++;

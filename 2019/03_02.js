@@ -43,7 +43,7 @@ let getWireMatrix = (wire, pos = null) => {
         }
     }
 
-    return pos ? steps+1 : matrix;
+    return pos ? steps + 1 : matrix;
 };
 
 let min = 999999;
@@ -52,9 +52,11 @@ let matrixY = getWireMatrix(wires[1]);
 let closestPoint;
 Object
     .keys(matrixX)
-    .filter(function(key) { return typeof matrixY[key] !== 'undefined' })
-    .forEach(function(el) {
-        [x, y] = el.split(';').map(function(x) {
+    .filter(function (key) {
+        return typeof matrixY[key] !== 'undefined'
+    })
+    .forEach(function (el) {
+        [x, y] = el.split(';').map(function (x) {
             return parseInt(x, 10);
         });
         closestPoint = (getWireMatrix(wires[0], {x: x, y: y}) + getWireMatrix(wires[1], {x: x, y: y}));

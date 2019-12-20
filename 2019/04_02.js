@@ -21,7 +21,6 @@ for (let i = start; i <= stop; i++) {
         }
     }
     if (valid === 5 && hasAdjacent) {
-        console.log(num.join(''));
         numberOfPasswords++;
     }
 }
